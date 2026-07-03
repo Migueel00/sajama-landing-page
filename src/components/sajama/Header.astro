@@ -1,0 +1,60 @@
+---
+const navLinks = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#proyectos', label: 'Proyectos' },
+  { href: '#nosotros', label: 'Nosotros' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#e8e6e0]">
+  <input type="checkbox" id="nav-toggle" class="peer hidden" />
+
+  <div class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 h-16 md:h-[76px] flex items-center justify-between">
+    <a href="#top" class="flex items-baseline gap-2.5">
+      <span class="font-extrabold text-xl sm:text-2xl tracking-[0.14em] text-brand">SAJAMA</span>
+      <span class="hidden sm:inline text-[10px] tracking-[0.22em] text-[#9a9d9f] uppercase font-semibold">
+        Construcción
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-9">
+      {navLinks.map((link) => (
+        <a href={link.href} class="text-sm font-medium text-[#45484c] hover:text-[#16181b] transition-colors">
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#contacto"
+        class="text-[13px] font-semibold text-white bg-brand hover:bg-brand-dark transition-colors px-5 py-2.5 rounded-[10px] tracking-[0.01em]"
+      >
+        Pedir presupuesto
+      </a>
+    </nav>
+
+    <label
+      for="nav-toggle"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 cursor-pointer text-[#16181b]"
+      aria-label="Abrir menú"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </label>
+  </div>
+
+  <div class="md:hidden hidden peer-checked:flex flex-col gap-1 px-5 sm:px-8 py-4 border-t border-[#e8e6e0] bg-white">
+    {navLinks.map((link) => (
+      <a href={link.href} class="py-2.5 text-[15px] font-medium text-[#45484c]">
+        {link.label}
+      </a>
+    ))}
+    <a
+      href="#contacto"
+      class="mt-2 text-center text-sm font-semibold text-white bg-brand hover:bg-brand-dark transition-colors px-5 py-3 rounded-[10px]"
+    >
+      Pedir presupuesto
+    </a>
+  </div>
+</header>

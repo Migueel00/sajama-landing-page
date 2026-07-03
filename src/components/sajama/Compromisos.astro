@@ -1,0 +1,20 @@
+---
+const items = [
+  { title: 'Trato cercano', desc: 'Tratas siempre con las mismas personas, del primer día a la entrega.' },
+  { title: 'Presupuesto claro', desc: 'Cerrado por escrito antes de empezar, sin sorpresas ni añadidos.' },
+  { title: 'Oficio propio', desc: 'Ejecutamos nosotros mismos la mayor parte de cada obra.' },
+  { title: 'Cerca, en Gipuzkoa', desc: 'Trabajamos por todo el territorio con la agilidad de conocerlo.' },
+];
+---
+
+<section class="bg-[#f4f8fd] border-y border-[#e6eef8]">
+  <div class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 md:gap-11">
+    {items.map((item) => (
+      <div>
+        <div class="w-7 h-[3px] bg-brand rounded-sm mb-4"></div>
+        <div class="text-lg font-bold tracking-[-0.01em] mb-2">{item.title}</div>
+        <div class="text-sm text-[#5c6066] leading-[1.5]">{item.desc}</div>
+      </div>
+    ))}
+  </div>
+</section>

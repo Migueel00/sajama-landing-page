@@ -1,0 +1,53 @@
+---
+const tags = ['Reformas integrales', 'Obra nueva', 'Rehabilitación', 'Fachadas y cubiertas', 'Obra pública'];
+---
+
+<section id="top" class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 pt-14 sm:pt-20 md:pt-24 pb-8 md:pb-10">
+  <div class="inline-flex items-center gap-2.5 mb-7 md:mb-9 bg-[#eaf1fa] pl-3.5 pr-4 py-2 rounded-full">
+    <span class="w-[7px] h-[7px] bg-brand rounded-full"></span>
+    <span class="text-[11px] sm:text-xs tracking-[0.16em] uppercase text-brand font-semibold">
+      Gipuzkoa · Desde 1998
+    </span>
+  </div>
+
+  <h1 class="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[76px] leading-[0.98] font-bold tracking-[-0.03em] mb-7 md:mb-8 max-w-[15ch] text-balance">
+    Obra bien hecha, con el trato cercano de un equipo <span class="text-brand">de confianza</span>.
+  </h1>
+
+  <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-end">
+    <p class="text-base sm:text-lg md:text-[19px] leading-[1.55] text-[#45484c] max-w-[48ch]">
+      En SAJAMA somos un equipo pequeño dedicado a la albañilería y la rehabilitación en Gipuzkoa. Acompañamos cada
+      proyecto de principio a fin, con la tranquilidad de tratar siempre con las mismas personas.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a
+        href="#contacto"
+        class="text-[15px] font-semibold text-white bg-brand hover:bg-brand-dark transition-colors px-7 py-[15px] rounded-[10px]"
+      >
+        Solicita presupuesto
+      </a>
+      <a
+        href="#proyectos"
+        class="text-[15px] font-semibold text-[#16181b] hover:border-[#16181b] transition-colors px-7 py-[15px] rounded-[10px] border border-[#d6d4cd]"
+      >
+        Ver proyectos
+      </a>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-2.5 mt-9 md:mt-10">
+    {tags.map((tag) => (
+      <span class="text-[13px] font-medium text-[#45484c] bg-white border border-[#e8e6e0] px-4 py-2.5 rounded-full">
+        {tag}
+      </span>
+    ))}
+  </div>
+</section>
+
+<section class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 pb-7">
+  <img
+    src="/images/hero-terraza.jpeg"
+    alt="Obra principal SAJAMA"
+    class="block w-full h-64 sm:h-96 md:h-[420px] lg:h-[560px] object-cover rounded-2xl shadow-[0_30px_70px_-34px_rgba(20,45,80,0.4)] bg-[#e8e6e0]"
+  />
+</section>

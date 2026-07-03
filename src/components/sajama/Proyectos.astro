@@ -1,0 +1,45 @@
+---
+const proyectos = [
+  { img: '/images/proyecto-jesuitak.jpeg', alt: 'Rehabilitación Jesuitak', tag: 'Rehabilitación de edificio', title: 'Rehabilitación Jesuitak', place: 'Donostia' },
+  { img: '/images/proyecto-obra-nueva.jpeg', alt: 'Edificio de viviendas', tag: 'Obra nueva residencial', title: 'Edificio de viviendas', place: 'Gipuzkoa' },
+  { img: '/images/proyecto-caserio.jpeg', alt: 'Rehabilitación de caserío', tag: 'Rehabilitación', title: 'Rehabilitación de caserío', place: 'Gipuzkoa' },
+  { img: '/images/proyecto-fachada-bloque.jpeg', alt: 'Rehabilitación de fachada', tag: 'Rehabilitación', title: 'Rehabilitación de fachada', place: 'Gipuzkoa' },
+];
+---
+
+<section id="proyectos" class="bg-[#f5f4f1] mt-20 md:mt-24">
+  <div class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-20 md:py-24 lg:py-[100px]">
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-10 md:mb-[50px]">
+      <div>
+        <div class="text-xs tracking-[0.18em] uppercase text-brand font-semibold mb-4">Obra entregada</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.025em] leading-[1.04]">
+          Proyectos recientes
+        </h2>
+      </div>
+      <a href="#contacto" class="text-[15px] font-semibold text-brand border-b border-brand pb-[3px] w-fit">
+        Cuéntanos el tuyo
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+      {proyectos.map((p) => (
+        <div>
+          <div class="relative">
+            <img
+              src={p.img}
+              alt={p.alt}
+              class="block w-full h-64 sm:h-72 md:h-80 lg:h-[380px] object-cover rounded-2xl shadow-[0_22px_50px_-28px_rgba(20,45,80,0.32)] bg-[#e8e6e0]"
+            />
+            <span class="absolute top-4 left-4 bg-white/92 backdrop-blur-sm text-brand text-[11px] font-bold tracking-[0.06em] uppercase px-3.5 py-[7px] rounded-full">
+              {p.tag}
+            </span>
+          </div>
+          <div class="flex justify-between items-baseline mt-[18px] gap-4">
+            <h3 class="text-lg md:text-[22px] font-semibold tracking-[-0.01em]">{p.title}</h3>
+            <span class="text-[13px] text-[#6f7378] whitespace-nowrap">{p.place}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

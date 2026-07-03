@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAJAMA — Referencia estática de diseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Archivo', system-ui, sans-serif; color: #16181b; background: #fbfaf8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: #1e5fa8; color: #fff; }
+  input, textarea, select, button { font-family: inherit; }
+  a { text-decoration: none; color: inherit; }
+  .nav-cta:hover { background: #143f6e; }
+  .btn-primary:hover { background: #143f6e; }
+  .btn-secondary:hover { border-color: #16181b; }
+  .service-row:hover { background: #fafaf8; }
+  input:focus, textarea:focus, select:focus { border-color: #1e5fa8; }
+  .submit-btn:hover { background: #143f6e; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid #e8e6e0;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 40px; height: 76px; display: flex; align-items: center; justify-content: space-between;">
+    <a href="#top" style="display: flex; align-items: baseline; gap: 10px;">
+      <span style="font-weight: 800; font-size: 23px; letter-spacing: 0.14em; color: #1e5fa8;">SAJAMA</span>
+      <span style="font-size: 10px; letter-spacing: 0.22em; color: #9a9d9f; text-transform: uppercase; font-weight: 600;">Construcción</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 38px;">
+      <a href="#servicios" style="font-size: 14px; font-weight: 500; color: #45484c;">Servicios</a>
+      <a href="#proyectos" style="font-size: 14px; font-weight: 500; color: #45484c;">Proyectos</a>
+      <a href="#nosotros" style="font-size: 14px; font-weight: 500; color: #45484c;">Nosotros</a>
+      <a href="#contacto" class="nav-cta" style="font-size: 13px; font-weight: 600; color: #fff; background: #1e5fa8; padding: 11px 20px; border-radius: 10px; letter-spacing: 0.01em; transition: background .15s;">Pedir presupuesto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="max-width: 1240px; margin: 0 auto; padding: 96px 40px 40px;">
+  <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 34px; background: #eaf1fa; padding: 9px 16px 9px 14px; border-radius: 999px;">
+    <span style="width: 7px; height: 7px; background: #1e5fa8; border-radius: 50%;"></span>
+    <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #1e5fa8; font-weight: 600;">Gipuzkoa · Desde 1998</span>
+  </div>
+  <h1 style="font-size: 76px; line-height: 0.98; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 32px; max-width: 15ch; text-wrap: balance;">Obra bien hecha, con el trato cercano de un equipo <span style="color: #1e5fa8;">de confianza</span>.</h1>
+  <div style="display: flex; gap: 64px; align-items: flex-end; flex-wrap: wrap;">
+    <p style="font-size: 19px; line-height: 1.55; color: #45484c; margin: 0; max-width: 48ch;">En SAJAMA somos un equipo pequeño dedicado a la albañilería y la rehabilitación en Gipuzkoa. Acompañamos cada proyecto de principio a fin, con la tranquilidad de tratar siempre con las mismas personas.</p>
+    <div style="display: flex; gap: 16px;">
+      <a href="#contacto" class="btn-primary" style="font-size: 15px; font-weight: 600; color: #fff; background: #1e5fa8; padding: 15px 28px; border-radius: 10px; transition: background .15s;">Solicita presupuesto</a>
+      <a href="#proyectos" class="btn-secondary" style="font-size: 15px; font-weight: 600; color: #16181b; padding: 15px 28px; border: 1px solid #d6d4cd; border-radius: 10px; transition: border-color .15s;">Ver proyectos</a>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px;">
+    <span style="font-size: 13px; font-weight: 500; color: #45484c; background: #fff; border: 1px solid #e8e6e0; padding: 9px 16px; border-radius: 999px;">Reformas integrales</span>
+    <span style="font-size: 13px; font-weight: 500; color: #45484c; background: #fff; border: 1px solid #e8e6e0; padding: 9px 16px; border-radius: 999px;">Obra nueva</span>
+    <span style="font-size: 13px; font-weight: 500; color: #45484c; background: #fff; border: 1px solid #e8e6e0; padding: 9px 16px; border-radius: 999px;">Rehabilitación</span>
+    <span style="font-size: 13px; font-weight: 500; color: #45484c; background: #fff; border: 1px solid #e8e6e0; padding: 9px 16px; border-radius: 999px;">Fachadas y cubiertas</span>
+    <span style="font-size: 13px; font-weight: 500; color: #45484c; background: #fff; border: 1px solid #e8e6e0; padding: 9px 16px; border-radius: 999px;">Obra pública</span>
+  </div>
+</section>
+
+<!-- HERO IMAGE -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 0 40px 28px;">
+  <img src="images/hero-terraza.jpeg" alt="Obra principal SAJAMA" style="display:block; width:100%; height:560px; object-fit:cover; border-radius:16px; box-shadow:0 30px 70px -34px rgba(20,45,80,.4);">
+</section>
+
+<!-- COMPROMISOS -->
+<section style="background: #f4f8fd; border-top: 1px solid #e6eef8; border-bottom: 1px solid #e6eef8;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px;">
+    <div>
+      <div style="width: 28px; height: 3px; background: #1e5fa8; border-radius: 2px; margin-bottom: 18px;"></div>
+      <div style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px;">Trato cercano</div>
+      <div style="font-size: 14px; color: #5c6066; line-height: 1.5;">Tratas siempre con las mismas personas, del primer día a la entrega.</div>
+    </div>
+    <div>
+      <div style="width: 28px; height: 3px; background: #1e5fa8; border-radius: 2px; margin-bottom: 18px;"></div>
+      <div style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px;">Presupuesto claro</div>
+      <div style="font-size: 14px; color: #5c6066; line-height: 1.5;">Cerrado por escrito antes de empezar, sin sorpresas ni añadidos.</div>
+    </div>
+    <div>
+      <div style="width: 28px; height: 3px; background: #1e5fa8; border-radius: 2px; margin-bottom: 18px;"></div>
+      <div style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px;">Oficio propio</div>
+      <div style="font-size: 14px; color: #5c6066; line-height: 1.5;">Ejecutamos nosotros mismos la mayor parte de cada obra.</div>
+    </div>
+    <div>
+      <div style="width: 28px; height: 3px; background: #1e5fa8; border-radius: 2px; margin-bottom: 18px;"></div>
+      <div style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px;">Cerca, en Gipuzkoa</div>
+      <div style="font-size: 14px; color: #5c6066; line-height: 1.5;">Trabajamos por todo el territorio con la agilidad de conocerlo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px 30px;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 54px; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1e5fa8; font-weight: 600; margin-bottom: 16px;">Qué hacemos</div>
+      <h2 style="font-size: 46px; font-weight: 700; letter-spacing: -0.025em; margin: 0; max-width: 18ch; line-height: 1.04;">En lo que podemos ayudarte.</h2>
+    </div>
+    <p style="font-size: 16px; color: #6f7378; margin: 0; max-width: 34ch; line-height: 1.5;">Preferimos llevar pocas obras a la vez y dedicarles el tiempo que merecen.</p>
+  </div>
+  <div style="border-top: 1px solid #e8e6e0;">
+    <div class="service-row" style="display: grid; grid-template-columns: 80px 1fr 1.4fr auto; gap: 32px; align-items: center; padding: 30px 0; border-bottom: 1px solid #e8e6e0; transition: background .15s;">
+      <div style="font-size: 14px; font-weight: 600; color: #b7bac0; font-variant-numeric: tabular-nums;">01</div>
+      <h3 style="font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Reformas integrales</h3>
+      <p style="font-size: 15px; color: #6f7378; margin: 0; line-height: 1.5;">Viviendas y locales reformados de principio a fin, sin intermediarios.</p>
+      <span style="font-size: 20px; color: #1e5fa8;">→</span>
+    </div>
+    <div class="service-row" style="display: grid; grid-template-columns: 80px 1fr 1.4fr auto; gap: 32px; align-items: center; padding: 30px 0; border-bottom: 1px solid #e8e6e0; transition: background .15s;">
+      <div style="font-size: 14px; font-weight: 600; color: #b7bac0; font-variant-numeric: tabular-nums;">02</div>
+      <h3 style="font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Obra nueva residencial</h3>
+      <p style="font-size: 15px; color: #6f7378; margin: 0; line-height: 1.5;">Viviendas unifamiliares, desde cimentación hasta llave en mano.</p>
+      <span style="font-size: 20px; color: #1e5fa8;">→</span>
+    </div>
+    <div class="service-row" style="display: grid; grid-template-columns: 80px 1fr 1.4fr auto; gap: 32px; align-items: center; padding: 30px 0; border-bottom: 1px solid #e8e6e0; transition: background .15s;">
+      <div style="font-size: 14px; font-weight: 600; color: #b7bac0; font-variant-numeric: tabular-nums;">03</div>
+      <h3 style="font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Obra pública y civil</h3>
+      <p style="font-size: 15px; color: #6f7378; margin: 0; line-height: 1.5;">Urbanización y trabajos puntuales para administración pública.</p>
+      <span style="font-size: 20px; color: #1e5fa8;">→</span>
+    </div>
+    <div class="service-row" style="display: grid; grid-template-columns: 80px 1fr 1.4fr auto; gap: 32px; align-items: center; padding: 30px 0; border-bottom: 1px solid #e8e6e0; transition: background .15s;">
+      <div style="font-size: 14px; font-weight: 600; color: #b7bac0; font-variant-numeric: tabular-nums;">04</div>
+      <h3 style="font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Rehabilitación de edificios</h3>
+      <p style="font-size: 15px; color: #6f7378; margin: 0; line-height: 1.5;">Fachadas, cubiertas y comunidades de vecinos, con andamio propio.</p>
+      <span style="font-size: 20px; color: #1e5fa8;">→</span>
+    </div>
+    <div class="service-row" style="display: grid; grid-template-columns: 80px 1fr 1.4fr auto; gap: 32px; align-items: center; padding: 30px 0; border-bottom: 1px solid #e8e6e0; transition: background .15s;">
+      <div style="font-size: 14px; font-weight: 600; color: #b7bac0; font-variant-numeric: tabular-nums;">05</div>
+      <h3 style="font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Naves industriales</h3>
+      <p style="font-size: 15px; color: #6f7378; margin: 0; line-height: 1.5;">Construcción y acondicionamiento de naves y locales.</p>
+      <span style="font-size: 20px; color: #1e5fa8;">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" style="background: #f5f4f1; margin-top: 90px;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 100px 40px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px; gap: 40px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1e5fa8; font-weight: 600; margin-bottom: 16px;">Obra entregada</div>
+        <h2 style="font-size: 46px; font-weight: 700; letter-spacing: -0.025em; margin: 0; line-height: 1.04;">Proyectos recientes</h2>
+      </div>
+      <a href="#contacto" style="font-size: 15px; font-weight: 600; color: #1e5fa8; border-bottom: 1px solid #1e5fa8; padding-bottom: 3px;">Cuéntanos el tuyo</a>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <div>
+        <div style="position: relative;">
+          <img src="images/proyecto-jesuitak.jpeg" alt="Rehabilitación Jesuitak" style="display:block; width:100%; height:380px; object-fit:cover; border-radius:16px; box-shadow:0 22px 50px -28px rgba(20,45,80,.32);">
+          <span style="position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); color: #1e5fa8; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px;">Rehabilitación de edificio</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; gap: 16px;">
+          <h3 style="font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Rehabilitación Jesuitak</h3>
+          <span style="font-size: 13px; color: #6f7378; white-space: nowrap;">Donostia</span>
+        </div>
+      </div>
+      <div>
+        <div style="position: relative;">
+          <img src="images/proyecto-obra-nueva.jpeg" alt="Edificio de viviendas" style="display:block; width:100%; height:380px; object-fit:cover; border-radius:16px; box-shadow:0 22px 50px -28px rgba(20,45,80,.32);">
+          <span style="position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); color: #1e5fa8; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px;">Obra nueva residencial</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; gap: 16px;">
+          <h3 style="font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Edificio de viviendas</h3>
+          <span style="font-size: 13px; color: #6f7378; white-space: nowrap;">Gipuzkoa</span>
+        </div>
+      </div>
+      <div>
+        <div style="position: relative;">
+          <img src="images/proyecto-caserio.jpeg" alt="Rehabilitación de caserío" style="display:block; width:100%; height:380px; object-fit:cover; border-radius:16px; box-shadow:0 22px 50px -28px rgba(20,45,80,.32);">
+          <span style="position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); color: #1e5fa8; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px;">Rehabilitación</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; gap: 16px;">
+          <h3 style="font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Rehabilitación de caserío</h3>
+          <span style="font-size: 13px; color: #6f7378; white-space: nowrap;">Gipuzkoa</span>
+        </div>
+      </div>
+      <div>
+        <div style="position: relative;">
+          <img src="images/proyecto-fachada-bloque.jpeg" alt="Rehabilitación de fachada" style="display:block; width:100%; height:380px; object-fit:cover; border-radius:16px; box-shadow:0 22px 50px -28px rgba(20,45,80,.32);">
+          <span style="position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); color: #1e5fa8; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 13px; border-radius: 999px;">Rehabilitación</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; gap: 16px;">
+          <h3 style="font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Rehabilitación de fachada</h3>
+          <span style="font-size: 13px; color: #6f7378; white-space: nowrap;">Gipuzkoa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+    <div>
+      <img src="images/equipo-obra.jpeg" alt="Equipo SAJAMA en obra" style="display:block; width:100%; height:600px; object-fit:cover; border-radius:16px; box-shadow:0 30px 70px -34px rgba(20,45,80,.4);">
+    </div>
+    <div>
+      <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1e5fa8; font-weight: 600; margin-bottom: 20px;">Quiénes somos</div>
+      <h2 style="font-size: 42px; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 28px; line-height: 1.06;">Un equipo pequeño de Gipuzkoa, cercano y de confianza.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #45484c; margin: 0 0 20px;">En SAJAMA somos un grupo reducido de profesionales de la albañilería y la rehabilitación. Casi todos estamos a pie de obra cada día, así que cuando nos llamas hablas directamente con quien va a llevar tu proyecto.</p>
+      <p style="font-size: 17px; line-height: 1.6; color: #45484c; margin: 0 0 40px;">Es una forma de trabajar más artesana y tranquila: pocas obras a la vez, atención al detalle y la cara siempre visible.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; border-top: 1px solid #e8e6e0; padding-top: 32px;">
+        <div>
+          <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Trato cercano</div>
+          <div style="font-size: 14px; color: #6f7378; line-height: 1.5;">Una misma persona te acompaña de principio a fin.</div>
+        </div>
+        <div>
+          <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Plazo y presupuesto</div>
+          <div style="font-size: 14px; color: #6f7378; line-height: 1.5;">Cerrados por escrito antes de empezar, sin sorpresas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section style="background: #16181b; color: #fff;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 100px 40px;">
+    <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #6da4e6; font-weight: 600; margin-bottom: 50px;">Lo que dicen</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px;">
+      <div>
+        <p style="font-size: 19px; line-height: 1.5; margin: 0 0 28px; font-weight: 500; color: #f0f0ee;">"Cumplieron plazo y presupuesto al detalle. Algo poco común y muy de agradecer."</p>
+        <div style="font-size: 14px; font-weight: 600;">Maite A.</div>
+        <div style="font-size: 13px; color: #9a9d9f; margin-top: 3px;">Reforma integral · Donostia</div>
+      </div>
+      <div>
+        <p style="font-size: 19px; line-height: 1.5; margin: 0 0 28px; font-weight: 500; color: #f0f0ee;">"Equipo serio y limpio en obra. La comunicación fue impecable de principio a fin."</p>
+        <div style="font-size: 14px; font-weight: 600;">Jon E.</div>
+        <div style="font-size: 13px; color: #9a9d9f; margin-top: 3px;">Vivienda unifamiliar · Hondarribia</div>
+      </div>
+      <div>
+        <p style="font-size: 19px; line-height: 1.5; margin: 0 0 28px; font-weight: 500; color: #f0f0ee;">"Resolvieron imprevistos sin dramas y sin sobrecostes injustificados. Repetiremos."</p>
+        <div style="font-size: 14px; font-weight: 600;">Grupo Berri</div>
+        <div style="font-size: 13px; color: #9a9d9f; margin-top: 3px;">Nave industrial · Irun</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" style="max-width: 1240px; margin: 0 auto; padding: 110px 40px;">
+  <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px;">
+    <div>
+      <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #1e5fa8; font-weight: 600; margin-bottom: 20px;">Hablemos</div>
+      <h2 style="font-size: 44px; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 28px; line-height: 1.04;">Pide tu presupuesto sin compromiso.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #45484c; margin: 0 0 44px; max-width: 38ch;">Cuéntanos qué tienes en mente. Te respondemos en menos de 48 horas laborables con una valoración inicial.</p>
+      <div style="display: flex; flex-direction: column; gap: 24px; border-top: 1px solid #e8e6e0; padding-top: 32px;">
+        <div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #9a9d9f; font-weight: 600; margin-bottom: 6px;">Teléfono</div>
+          <div style="font-size: 18px; font-weight: 600;">943 00 00 00</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #9a9d9f; font-weight: 600; margin-bottom: 6px;">Email</div>
+          <div style="font-size: 18px; font-weight: 600;">obra@sajama.es</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #9a9d9f; font-weight: 600; margin-bottom: 6px;">Oficina</div>
+          <div style="font-size: 18px; font-weight: 600;">Polígono · Gipuzkoa</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 1px solid #ecebe5; border-radius: 22px; padding: 44px; box-shadow: 0 30px 70px -40px rgba(20,45,80,.35);">
+      <div id="contact-success" style="display: none; flex-direction: column; align-items: flex-start; justify-content: center; min-height: 420px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #1e5fa8; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 24px;">✓</div>
+        <h3 style="font-size: 28px; font-weight: 700; margin: 0 0 12px; letter-spacing: -0.02em;">Recibido, gracias.</h3>
+        <p style="font-size: 16px; color: #45484c; margin: 0; line-height: 1.55;">Te contactaremos en menos de 48 horas laborables. Si es urgente, llámanos al 943 00 00 00.</p>
+      </div>
+      <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13px; font-weight: 600; color: #45484c;">Nombre</span>
+            <input required type="text" style="border: 1px solid #d6d4cd; background: #fff; border-radius: 10px; padding: 13px 14px; font-size: 15px; color: #16181b; outline: none;">
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13px; font-weight: 600; color: #45484c;">Teléfono</span>
+            <input required type="tel" style="border: 1px solid #d6d4cd; background: #fff; border-radius: 10px; padding: 13px 14px; font-size: 15px; color: #16181b; outline: none;">
+          </label>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #45484c;">Email</span>
+          <input required type="email" style="border: 1px solid #d6d4cd; background: #fff; border-radius: 10px; padding: 13px 14px; font-size: 15px; color: #16181b; outline: none;">
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #45484c;">Tipo de proyecto</span>
+          <select style="border: 1px solid #d6d4cd; background: #fff; border-radius: 10px; padding: 13px 14px; font-size: 15px; color: #16181b; outline: none;">
+            <option>Reforma integral</option>
+            <option>Obra nueva residencial</option>
+            <option>Obra pública / civil</option>
+            <option>Rehabilitación de edificios</option>
+            <option>Nave industrial</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #45484c;">Cuéntanos</span>
+          <textarea rows="4" style="border: 1px solid #d6d4cd; background: #fff; border-radius: 10px; padding: 13px 14px; font-size: 15px; color: #16181b; outline: none; resize: vertical;"></textarea>
+        </label>
+        <button type="submit" class="submit-btn" style="background: #1e5fa8; color: #fff; border: none; border-radius: 10px; padding: 16px; font-size: 15px; font-weight: 600; cursor: pointer; letter-spacing: 0.01em; transition: background .15s;">Enviar solicitud</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #16181b; color: #fff;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 64px 40px 40px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px;">
+    <div>
+      <div style="font-weight: 800; font-size: 24px; letter-spacing: 0.14em; color: #fff; margin-bottom: 12px;">SAJAMA</div>
+      <p style="font-size: 14px; color: #9a9d9f; margin: 0; max-width: 30ch; line-height: 1.5;">Construcción y reformas en Gipuzkoa. Equipo propio desde 1998.</p>
+    </div>
+    <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="#servicios" style="font-size: 14px; color: #c8cacc;">Servicios</a>
+        <a href="#proyectos" style="font-size: 14px; color: #c8cacc;">Proyectos</a>
+        <a href="#nosotros" style="font-size: 14px; color: #c8cacc;">Nosotros</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 14px; color: #c8cacc;">943 00 00 00</span>
+        <span style="font-size: 14px; color: #c8cacc;">obra@sajama.es</span>
+        <span style="font-size: 14px; color: #c8cacc;">Gipuzkoa</span>
+      </div>
+    </div>
+  </div>
+  <div style="max-width: 1240px; margin: 0 auto; padding: 24px 40px; border-top: 1px solid #2a2d31; font-size: 13px; color: #6f7378; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <span>© 2026 SAJAMA Construcción</span>
+    <span>Aviso legal · Privacidad</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'flex';
+  });
+</script>
+</body>
+</html>

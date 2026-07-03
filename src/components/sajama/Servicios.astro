@@ -1,0 +1,34 @@
+---
+const servicios = [
+  { num: '01', title: 'Reformas integrales', desc: 'Viviendas y locales reformados de principio a fin, sin intermediarios.' },
+  { num: '02', title: 'Obra nueva residencial', desc: 'Viviendas unifamiliares, desde cimentación hasta llave en mano.' },
+  { num: '03', title: 'Obra pública y civil', desc: 'Urbanización y trabajos puntuales para administración pública.' },
+  { num: '04', title: 'Rehabilitación de edificios', desc: 'Fachadas, cubiertas y comunidades de vecinos, con andamio propio.' },
+  { num: '05', title: 'Naves industriales', desc: 'Construcción y acondicionamiento de naves y locales.' },
+];
+---
+
+<section id="servicios" class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 pt-20 md:pt-28 lg:pt-[110px] pb-8">
+  <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-10 md:mb-14">
+    <div>
+      <div class="text-xs tracking-[0.18em] uppercase text-brand font-semibold mb-4">Qué hacemos</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.025em] max-w-[18ch] leading-[1.04]">
+        En lo que podemos ayudarte.
+      </h2>
+    </div>
+    <p class="text-base text-[#6f7378] max-w-[34ch] leading-[1.5]">
+      Preferimos llevar pocas obras a la vez y dedicarles el tiempo que merecen.
+    </p>
+  </div>
+
+  <div class="border-t border-[#e8e6e0]">
+    {servicios.map((s) => (
+      <div class="grid grid-cols-1 sm:grid-cols-[50px_1fr_auto] lg:grid-cols-[80px_1fr_1.4fr_auto] gap-2 sm:gap-6 lg:gap-8 sm:items-center py-6 md:py-[30px] border-b border-[#e8e6e0] transition-colors hover:bg-[#fafaf8]">
+        <div class="text-sm font-semibold text-[#b7bac0] tabular-nums order-1 sm:order-none">{s.num}</div>
+        <h3 class="text-xl md:text-[25px] font-semibold tracking-[-0.01em] order-2 sm:order-none">{s.title}</h3>
+        <p class="text-[15px] text-[#6f7378] leading-[1.5] order-4 sm:order-none">{s.desc}</p>
+        <span class="hidden sm:block text-xl text-brand order-3 sm:order-none">→</span>
+      </div>
+    ))}
+  </div>
+</section>

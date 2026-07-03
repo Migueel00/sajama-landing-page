@@ -1,0 +1,24 @@
+---
+const testimonios = [
+  { quote: '"Cumplieron plazo y presupuesto al detalle. Algo poco común y muy de agradecer."', name: 'Maite A.', meta: 'Reforma integral · Donostia' },
+  { quote: '"Equipo serio y limpio en obra. La comunicación fue impecable de principio a fin."', name: 'Jon E.', meta: 'Vivienda unifamiliar · Hondarribia' },
+  { quote: '"Resolvieron imprevistos sin dramas y sin sobrecostes injustificados. Repetiremos."', name: 'Grupo Berri', meta: 'Nave industrial · Irun' },
+];
+---
+
+<section class="bg-ink text-white">
+  <div class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-20 md:py-28 lg:py-[100px]">
+    <div class="text-xs tracking-[0.18em] uppercase text-[#6da4e6] font-semibold mb-10 md:mb-[50px]">
+      Lo que dicen
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[50px]">
+      {testimonios.map((t) => (
+        <div>
+          <p class="text-lg md:text-[19px] leading-[1.5] font-medium text-[#f0f0ee] mb-7">{t.quote}</p>
+          <div class="text-sm font-semibold">{t.name}</div>
+          <div class="text-[13px] text-[#9a9d9f] mt-[3px]">{t.meta}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
