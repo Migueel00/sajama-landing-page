@@ -18,7 +18,9 @@ Proyecto web construido con **Astro 5**, **Tailwind CSS v4** y **React 19 + Type
 ## Requisitos
 
 - **Node.js** >= 18.17.1
-- **npm** >= 9 (o pnpm / yarn equivalente)
+- **pnpm** >= 9 — gestor de paquetes requerido (no usar npm ni yarn)
+
+> Instala pnpm si no lo tienes: `npm install -g pnpm`
 
 ---
 
@@ -30,7 +32,7 @@ git clone <url-del-repo>
 cd sajama-landing
 
 # instalar dependencias
-npm install
+pnpm install
 ```
 
 ---
@@ -39,10 +41,10 @@ npm install
 
 | Comando | Descripción |
 |---|---|
-| `npm run dev` | Inicia el servidor de desarrollo en `localhost:4321` |
-| `npm run build` | Compila el proyecto para producción en `./dist/` |
-| `npm run preview` | Sirve el build de producción localmente |
-| `npm run astro ...` | CLI de Astro — ej. `npm run astro add <integration>` |
+| `pnpm dev` | Inicia el servidor de desarrollo en `localhost:4321` |
+| `pnpm build` | Compila el proyecto para producción en `./dist/` |
+| `pnpm preview` | Sirve el build de producción localmente |
+| `pnpm astro ...` | CLI de Astro — ej. `pnpm astro add <integration>` |
 
 ---
 
@@ -135,12 +137,12 @@ export default function MiComponente({ titulo, opcional = 0 }: Props) {
 
 ```bash
 # Ver integraciones disponibles
-npx astro add
+pnpm astro add
 
 # Ejemplos
-npx astro add mdx          # Soporte para MDX
-npx astro add sitemap      # Sitemap automático
-npx astro add image        # Optimización de imágenes
+pnpm astro add mdx          # Soporte para MDX
+pnpm astro add sitemap      # Sitemap automático
+pnpm astro add image        # Optimización de imágenes
 ```
 
 ---
