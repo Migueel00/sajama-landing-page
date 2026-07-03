@@ -1,12 +1,17 @@
 ---
+import { Image } from 'astro:assets';
+import equipoObra from '../../assets/images/equipo-obra.jpeg';
 ---
 
 <section id="nosotros" class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-20 md:py-28 lg:py-[110px]">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
     <div>
-      <img
-        src="/images/equipo-obra.jpeg"
+      <Image
+        src={equipoObra}
         alt="Equipo SAJAMA en obra"
+        width={1000}
+        format="webp"
+        quality={75}
         class="block w-full h-72 sm:h-96 lg:h-[600px] object-cover rounded-2xl shadow-[0_30px_70px_-34px_rgba(20,45,80,0.4)] bg-[#e8e6e0]"
       />
     </div>

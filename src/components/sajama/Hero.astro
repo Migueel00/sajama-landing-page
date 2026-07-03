@@ -1,12 +1,15 @@
 ---
-const tags = ['Reformas integrales', 'Obra nueva', 'Rehabilitación', 'Fachadas y cubiertas', 'Obra pública'];
+import { Image } from 'astro:assets';
+import heroTerraza from '../../assets/images/hero-terraza.jpeg';
+
+const tags = ['Reformas integrales', 'Rehabilitación', 'Fachadas y cubiertas', 'Obra pública'];
 ---
 
 <section id="top" class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 pt-14 sm:pt-20 md:pt-24 pb-8 md:pb-10">
   <div class="inline-flex items-center gap-2.5 mb-7 md:mb-9 bg-[#eaf1fa] pl-3.5 pr-4 py-2 rounded-full">
     <span class="w-[7px] h-[7px] bg-brand rounded-full"></span>
     <span class="text-[11px] sm:text-xs tracking-[0.16em] uppercase text-brand font-semibold">
-      Gipuzkoa · Desde 1998
+      Gipuzkoa · Desde 2019
     </span>
   </div>
 
@@ -45,9 +48,13 @@ const tags = ['Reformas integrales', 'Obra nueva', 'Rehabilitación', 'Fachadas 
 </section>
 
 <section class="max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 pb-7">
-  <img
-    src="/images/hero-terraza.jpeg"
+  <Image
+    src={heroTerraza}
     alt="Obra principal SAJAMA"
+    width={1600}
+    format="webp"
+    quality={75}
+    loading="eager"
     class="block w-full h-64 sm:h-96 md:h-[420px] lg:h-[560px] object-cover rounded-2xl shadow-[0_30px_70px_-34px_rgba(20,45,80,0.4)] bg-[#e8e6e0]"
   />
 </section>

@@ -22,15 +22,18 @@ const proyectoTipos = [
       <div class="flex flex-col gap-6 border-t border-[#e8e6e0] pt-8">
         <div>
           <div class="text-xs uppercase tracking-[0.12em] text-[#9a9d9f] font-semibold mb-1.5">Teléfono</div>
-          <div class="text-lg font-semibold">943 00 00 00</div>
+          <a href="tel:+34631516790" class="text-lg font-semibold hover:text-brand transition-colors">631 51 67 90</a>
         </div>
         <div>
           <div class="text-xs uppercase tracking-[0.12em] text-[#9a9d9f] font-semibold mb-1.5">Email</div>
-          <div class="text-lg font-semibold">obra@sajama.es</div>
+          <a href="mailto:sajamarehabilitaciones@gmail.com" class="text-lg font-semibold hover:text-brand transition-colors break-all">
+            sajamarehabilitaciones@gmail.com
+          </a>
         </div>
         <div>
           <div class="text-xs uppercase tracking-[0.12em] text-[#9a9d9f] font-semibold mb-1.5">Oficina</div>
-          <div class="text-lg font-semibold">Polígono · Gipuzkoa</div>
+          <div class="text-lg font-semibold">Calle Sancho Enea 10, 2º Dcha.</div>
+          <div class="text-sm text-[#6f7378] mt-0.5">20100 Errenteria, Gipuzkoa</div>
         </div>
       </div>
     </div>
@@ -42,7 +45,8 @@ const proyectoTipos = [
         </div>
         <h3 class="text-2xl md:text-[28px] font-bold tracking-[-0.02em] mb-3">Recibido, gracias.</h3>
         <p class="text-base text-[#45484c] leading-[1.55]">
-          Te contactaremos en menos de 48 horas laborables. Si es urgente, llámanos al 943 00 00 00.
+          Te contactaremos en menos de 48 horas laborables. Si es urgente, llámanos al
+          <a href="tel:+34631516790" class="font-semibold text-brand">631 51 67 90</a>.
         </p>
       </div>
 
@@ -53,6 +57,8 @@ const proyectoTipos = [
             <input
               required
               type="text"
+              name="nombre"
+              autocomplete="name"
               class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand"
             />
           </label>
@@ -61,6 +67,8 @@ const proyectoTipos = [
             <input
               required
               type="tel"
+              name="telefono"
+              autocomplete="tel"
               class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand"
             />
           </label>
@@ -70,12 +78,17 @@ const proyectoTipos = [
           <input
             required
             type="email"
+            name="email"
+            autocomplete="email"
             class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand"
           />
         </label>
         <label class="flex flex-col gap-2">
           <span class="text-[13px] font-semibold text-[#45484c]">Tipo de proyecto</span>
-          <select class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand">
+          <select
+            name="tipo_de_proyecto"
+            class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand"
+          >
             {proyectoTipos.map((tipo) => <option>{tipo}</option>)}
           </select>
         </label>
@@ -83,12 +96,17 @@ const proyectoTipos = [
           <span class="text-[13px] font-semibold text-[#45484c]">Cuéntanos</span>
           <textarea
             rows="4"
+            name="mensaje"
             class="border border-[#d6d4cd] bg-white rounded-[10px] px-3.5 py-[13px] text-[15px] text-[#16181b] outline-none focus:border-brand resize-y"
           ></textarea>
         </label>
+        <p id="contact-error" class="hidden text-sm text-red-600 leading-[1.5]">
+          No se ha podido enviar la solicitud. Inténtalo de nuevo o llámanos al
+          <a href="tel:+34631516790" class="font-semibold underline">631 51 67 90</a>.
+        </p>
         <button
           type="submit"
-          class="bg-brand hover:bg-brand-dark transition-colors text-white border-none rounded-[10px] py-4 text-[15px] font-semibold tracking-[0.01em] cursor-pointer"
+          class="bg-brand hover:bg-brand-dark transition-colors text-white border-none rounded-[10px] py-4 text-[15px] font-semibold tracking-[0.01em] cursor-pointer disabled:opacity-60 disabled:cursor-wait"
         >
           Enviar solicitud
         </button>
@@ -98,12 +116,34 @@ const proyectoTipos = [
 </section>
 
 <script>
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
   const success = document.getElementById('contact-success');
+  const errorBox = document.getElementById('contact-error');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    form.style.display = 'none';
-    if (success) success.style.display = 'flex';
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    errorBox?.classList.add('hidden');
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/sajamarehabilitaciones@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...Object.fromEntries(new FormData(form)),
+          _subject: 'Nueva solicitud de presupuesto — sajama.es',
+          _template: 'table',
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      form.style.display = 'none';
+      if (success) success.style.display = 'flex';
+    } catch {
+      errorBox?.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Enviar solicitud';
+    }
   });
 </script>

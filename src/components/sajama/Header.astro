@@ -58,3 +58,12 @@ const navLinks = [
     </a>
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle') as HTMLInputElement | null;
+  document.querySelectorAll('header a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (toggle) toggle.checked = false;
+    });
+  });
+</script>
